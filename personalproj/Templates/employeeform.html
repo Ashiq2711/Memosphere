@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            width: 70%;
+            max-width: 900px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="radio"], button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Employee Information Form</h2>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name1" required><br><br>
+
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="name2"><br><br>
+
+        <label for="work_email">Work Email Address:</label>
+        <input type="email" id="work_email" name="name3"><br><br>
+
+        <label for="work_phone">Work Phone Number:</label>
+        <input type="tel" id="work_phone" name="name4"><br><br>
+
+        <label for="date_of_joining">Date of Joining:</label>
+        <input type="date" id="date_of_joining" name="name5" required><br><br>
+
+        <div class="checkbox-group">
+            <label>Employment Type:</label><br>
+            <input type="radio" id="full_time" name="name6" required value="Full-Time">
+            <label for="full_time">Full-Time</label>
+            <input type="radio" id="part_time" name="name6" required value="Part-Time">
+            <label for="part_time">Part-Time</label><br><br>
+        </div>
+
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="name7"><br><br>
+
+        <label for="office_location">Office Location:</label>
+        <input type="text" id="office_location" name="name8"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

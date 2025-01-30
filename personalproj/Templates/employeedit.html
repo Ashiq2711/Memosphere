@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+
+</head>
+<body>
+    <h2>Employee Information Form</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name1" required value="{{key33.Name}}"><br><br>
+
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="name2" value="{{key33.job_title}}"><br><br>
+
+        <label for="work_email">Work Email Address:</label>
+        <input type="email" id="work_email" name="name3" value="{{key33.work_email}}"><br><br>
+
+        <label for="work_phone">Work Phone Number:</label>
+        <input type="tel" id="work_phone" name="name4" value="{{key33.work_phone}}"><br><br>
+
+        <label for="date_of_joining">Date of Joining:</label>
+        <input type="date" id="date_of_joining" name="name5" required value="{{key33.date_of_joining}}"><br><br>
+
+        <div class="checkbox-group">
+            <label>Employment Type:</label><br>
+            <input type="radio" id="full_time" name="name6" required value="{{key33.employment_type}}">
+            <label for="full_time">Full-Time</label>
+            <input type="radio" id="part_time" name="name6"  required value="{{key33.employment_type}}">
+            <label for="part_time">Part-Time</label><br><br>
+        </div>
+
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="name7" value="{{key33.employee_id}}"><br><br>
+
+        <label for="office_location">Office Location:</label>
+        <input type="text" id="office_location" name="name8" value="{{key33.office_location}}"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

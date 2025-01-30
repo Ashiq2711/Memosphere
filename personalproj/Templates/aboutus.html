@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>About Us - Personal Details Management</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #6a11cb, #6db3f2); /* Gradient background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-section {
+            background-image: url('{% static "diary_background.jpg" %}');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 0; /* Reduced padding */
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #f1f1f1;
+        }
+
+        .container {
+            padding: 50px 15px;
+        }
+
+        .about-content {
+            background-color: transparent; /* Make background transparent */
+            padding: 30px;
+        }
+
+        /* Text section and image layout */
+        .about-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: #fff; /* White color for headings */
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            color: #f1f1f1; /* Light grey text */
+            margin-bottom: 15px; /* Reduced bottom margin */
+        }
+
+        .about-text ul {
+            font-size: 1.125rem;
+            color: #f1f1f1;
+        }
+
+        .about-text ul li {
+            margin-bottom: 8px;
+        }
+
+        .about-image {
+            flex: 0 0 30%; /* Image takes up 30% of container */
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #1f7bbf;
+        }
+
+        .hr-line {
+            border-top: 2px solid #3498db;
+            width: 50px;
+            margin: 30px auto;
+        }
+
+        /* Positioning the back button at the top left */
+        .back-btn-top {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .back-btn-top:hover {
+            background-color: #1f7bbf;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button at the Top Left -->
+    <button class="back-btn-top" onclick="window.history.back();">Back</button>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>About This Platform</h1>
+        <p>Manage and keep track of your personal details in a secure and convenient way!</p>
+    </div>
+
+    <!-- About Content -->
+    <div class="container">
+        <!-- About Header with text and image side by side -->
+        <div class="about-header">
+            <div class="about-text">
+                <h2>Welcome to Your Personal Dashboard</h2>
+                <p>
+                    This website is designed to help you keep track of important personal details, such as:
+                </p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Easily store and manage your basic personal details like your name, contact information, and more.</li>
+                    <li><strong>Medical Information:</strong> Record your health-related information such as allergies, medications, and other medical conditions.</li>
+                    <li><strong>Financial Information:</strong> Keep an eye on your bank details, annual income, and more for budgeting and financial planning.</li>
+                    <li><strong>Employment Details:</strong> Track your job-related information such as work emails, phone numbers, office locations, and employee ID.</li>
+                    <li><strong>Educational Details:</strong> Keep track of your academic qualifications, institutions attended, degrees earned, and other educational milestones.</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="{% static 'img/abt.jpeg' %}" alt="About Us">
+            </div>
+        </div>
+
+        <h2>How This Platform Helps You</h2>
+        <p>
+            Once you've added your personal information, you can easily:
+        </p>
+        <ul>
+            <li><strong>View:</strong> Access your personal details anytime you want from your dashboard.</li>
+            <li><strong>Update:</strong> Edit your details whenever necessary to keep them current and accurate.</li>
+            <li><strong>Delete:</strong> Remove any outdated or irrelevant information with a simple click.</li>
+            <li><strong>Secure:</strong> Your data is protected, so you don’t have to worry about privacy.</li>
+        </ul>
+
+        <h2>Why Use This Platform?</h2>
+        <p>
+            This platform is built with convenience in mind. It serves as a one-stop place where you can manage all aspects of your life—from personal and health information to professional and financial records. Whether you're organizing your medical records, budgeting, or keeping track of your career data, this platform makes it easy and secure.
+        </p>
+
+        <h2>Your Data, Your Control</h2>
+        <p>
+            You have full control over your personal details. You can update or remove your information at any time, ensuring that your dashboard remains a reflection of your current self.
+        </p>
+
+        <hr class="hr-line">
+
+        <div class="btn-container text-center">
+            <a href="/" class="back-btn">Go Back to Your Dashboard</a>
+        </div>
+    </div>
+
+</body>
+</html>
